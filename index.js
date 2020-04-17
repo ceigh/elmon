@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 const meow = require('meow')
-const config = require('./src/cli')
-const hello = require('./src/hello')
+const options = require('./src/options')
+const { hello, isNoInput } = require('./src/_')
 
-const cli = meow(...config)
+const cli = meow(options)
 
-async function run () {
+function run () {
+  if (isNoInput(cli)) cli.showHelp()
   hello()
-  console.log(cli)
   // ask questions or parse cli
   // update version in package.json
   // show success message
