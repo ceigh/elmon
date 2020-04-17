@@ -1,0 +1,37 @@
+{
+  "name": "elmon",
+  "version": "0.0.0",
+  "description": "Package version manager.",
+  "main": "index.js",
+  "repository": "https://github.com/ceigh/elmon",
+  "author": "Artjom Löbsack <ceigh@pm.me>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "jest": "^25.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint && yarn test"
+    }
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "plugins": ["jest"],
+    "env": {
+      "jest/globals": true
+    }
+  }
+}
