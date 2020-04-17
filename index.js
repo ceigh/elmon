@@ -1,13 +1,14 @@
 #!/usr/bin/env node
-const { bold } = require('kleur')
+const meow = require('meow')
+const config = require('./src/cli')
+const hello = require('./src/hello')
 
-function hello () {
-  console.log('🍋 ' + bold('Elmon will now update the version.'))
-}
+const cli = meow(...config)
 
 async function run () {
   hello()
-  // ask questions or parse command line
+  console.log(cli)
+  // ask questions or parse cli
   // update version in package.json
   // show success message
 }
