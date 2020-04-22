@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "kleur": "^3.0.3",
-    "meow": "^6.1.0"
+    "meow": "^6.1.0",
+    "prompts": "^2.3.2"
   }
 }

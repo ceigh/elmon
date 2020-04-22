@@ -5,10 +5,14 @@ const _ = require('./src/_')
 
 const cli = meow(options)
 
-function run () {
+async function run () {
   _.hello()
+
+  const { flags } = cli
+  const type = _.isEmpty(flags) ? await _.prompt().type : _.getType(flags)
+  console.log(type)
+
   _.bye(cli.pkg.version, '1.0.0')
 }
 
-if (_.isEmpty(cli)) cli.showHelp()
 run()
