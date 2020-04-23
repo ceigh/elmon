@@ -37,22 +37,3 @@ $ e              # open prompt with update type select
 ```
 
 [![asciicast](https://asciinema.org/a/323178.svg)](https://asciinema.org/a/323178)
-
-## Additional
-
-This project was developed for automated versioning using utilities
-such as [husky](https://github.com/typicode/husky)
-and [others](https://github.com/topics/git-hooks).
-
-Automate the versioning of your package with husky:
-
-```json
-// package.json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "e -m",
-    }
-  }
-}
-```
