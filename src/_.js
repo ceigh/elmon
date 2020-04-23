@@ -1,6 +1,7 @@
 const { green, gray, underline } = require('kleur')
 const prompts = require('prompts')
 const pkg = require('package-json-io')
+const shell = require('shelljs')
 
 exports.bye = (v1, v2) => console.log(green('✔') +
   ` Version updated: ${underline(v1)} ${gray('›')} ${underline(v2)}`)
@@ -60,4 +61,9 @@ exports.getVersion = () => {
       resolve(data.version)
     })
   })
+}
+
+exports.add = () => {
+  if (!shell.which('git')) return
+  shell.exec(`git add ${process.cwd()}/package.json`)
 }

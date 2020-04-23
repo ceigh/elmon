@@ -11,6 +11,7 @@ async function run () {
   const v2 = _.update(type, v1)
 
   await _.write(v2)
+  _.add()
   _.bye(v1, v2)
 }
 
