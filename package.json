@@ -1,12 +1,16 @@
 {
   "name": "elmon",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Package version manager.",
   "main": "index.js",
   "repository": "https://github.com/ceigh/elmon",
   "author": "Artjom Löbsack <ceigh@pm.me>",
   "license": "MIT",
-  "private": true,
+  "main": "index.js",
+  "bin": {
+    "elmon": "./index.js",
+    "e": "./index.js"
+  },
   "scripts": {
     "lint": "eslint . --fix",
     "test": "jest"
@@ -39,6 +43,7 @@
   "dependencies": {
     "kleur": "^3.0.3",
     "meow": "^6.1.0",
+    "package-json-io": "^1.0.0",
     "prompts": "^2.3.2"
   }
 }

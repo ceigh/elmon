@@ -11,13 +11,13 @@ it('is not empty', () => {
 })
 
 it('updates major', () => {
-  expect(_.update('0.0.0', 'major')).toBe('1.0.0')
+  expect(_.update('major', '0.0.0')).toBe('1.0.0')
 })
 
 it('updates minor', () => {
-  expect(_.update('0.0.0', 'minor')).toBe('0.1.0')
+  expect(_.update('minor', '0.0.0')).toBe('0.1.0')
 })
 
 it('updates patch', () => {
-  expect(_.update('0.0.0', 'patch')).toBe('0.0.1')
+  expect(_.update('patch', '0.0.0')).toBe('0.0.1')
 })
