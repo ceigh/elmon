@@ -40,12 +40,15 @@ exports.update = (type, v1) => {
 }
 
 exports.write = v => {
-  pkg.read((err, data) => {
-    if (err) throw err
-    data.version = v
+  return new Promise((resolve, reject) => {
+    pkg.read((err, data) => {
+      if (err) reject(err)
+      data.version = v
 
-    pkg.update(data, e => {
-      if (e) throw e
+      pkg.update(data, e => {
+        if (e) reject(e)
+        resolve()
+      })
     })
   })
 }

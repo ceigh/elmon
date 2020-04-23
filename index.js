@@ -10,7 +10,7 @@ async function run () {
   const v1 = await _.getVersion()
   const v2 = _.update(type, v1)
 
-  _.write(v2)
+  await _.write(v2)
   _.bye(v1, v2)
 }
 
