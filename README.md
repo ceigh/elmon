@@ -1,6 +1,9 @@
 # 🍋 Elmon
 > A package version manager, that just makes IT simple.
 
+[![npm](https://img.shields.io/npm/v/elmon?style=plastic)](https://www.npmjs.com/package/elmon)
+[![size](https://img.shields.io/bundlephobia/minzip/elmon?style=plastic)](https://www.npmjs.com/package/elmon)
+
 ## Install
 
 Local:
@@ -46,7 +49,7 @@ Automate the versioning of your package with husky:
 {
   "husky": {
     "hooks": {
-      "pre-commit": "e",
+      "pre-commit": "e -m",
     }
   }
 }

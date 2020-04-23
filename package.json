@@ -1,10 +1,16 @@
 {
   "name": "elmon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Package version manager.",
   "main": "index.js",
   "repository": "https://github.com/ceigh/elmon",
   "author": "Artjom Löbsack <ceigh@pm.me>",
+  "keywords": [
+    "cli",
+    "version",
+    "semver",
+    "git-hooks"
+  ],
   "license": "MIT",
   "bin": {
     "elmon": "./index.js",
