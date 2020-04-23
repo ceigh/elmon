@@ -36,4 +36,4 @@ $ e -p           # 0.0.0 > 0.0.1
 $ e              # open prompt with update type select
 ```
 
-[![asciicast](https://asciinema.org/a/323178.svg)](https://asciinema.org/a/323178)
+[![asciicast](https://asciinema.org/a/323238.svg)](https://asciinema.org/a/323238)
