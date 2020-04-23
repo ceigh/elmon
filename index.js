@@ -4,10 +4,10 @@ const opts = require('./src/opts')
 const _ = require('./src/_')
 
 async function run () {
-  const cli = meow(opts)
-  const type = _.isEmpty(cli.flags)
-    ? await _.prompt() : _.getType(cli.flags)
-  const v1 = cli.pkg.version
+  const { flags } = meow(opts)
+  const type = _.isEmpty(flags)
+    ? await _.prompt() : _.getType(flags)
+  const v1 = await _.getVersion()
   const v2 = _.update(type, v1)
 
   _.write(v2)

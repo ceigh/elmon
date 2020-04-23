@@ -49,3 +49,12 @@ exports.write = v => {
     })
   })
 }
+
+exports.getVersion = () => {
+  return new Promise((resolve, reject) => {
+    pkg.read((e, data) => {
+      if (e) reject(e)
+      resolve(data.version)
+    })
+  })
+}
