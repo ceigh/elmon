@@ -1273,6 +1273,16 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+elmon@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/elmon/-/elmon-1.0.0.tgz#d4a22a728a84554e32347b271cb994387063ba76"
+  integrity sha512-Jas4mUXkEoSTjLa43wH5m5tqCx5uOuF2zla1jSBnAs01ICtrzC9BfoLRk5WzuLoFn1EduZgF9IgaT4M3NOb+9A==
+  dependencies:
+    kleur "^3.0.3"
+    meow "^6.1.0"
+    package-json-io "^1.0.0"
+    prompts "^2.3.2"
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"

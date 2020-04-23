@@ -6,7 +6,6 @@
   "repository": "https://github.com/ceigh/elmon",
   "author": "Artjom Löbsack <ceigh@pm.me>",
   "license": "MIT",
-  "main": "index.js",
   "bin": {
     "elmon": "./index.js",
     "e": "./index.js"
@@ -16,6 +15,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "elmon": "^1.0.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint && yarn test"
+      "pre-commit": "yarn run lint && yarn test && e -m"
     }
   },
   "eslintConfig": {

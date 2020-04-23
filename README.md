@@ -5,7 +5,7 @@
 
 Local:
 
-`yarn add elmon  # or npm i elmon`
+`yarn add elmon -D # or npm i elmon -D`
 
 Global:
 
@@ -46,7 +46,7 @@ Automate the versioning of your package with husky:
 {
   "husky": {
     "hooks": {
-      "pre-commit": "elmon",
+      "pre-commit": "e",
     }
   }
 }
