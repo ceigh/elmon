@@ -12,6 +12,7 @@ async function run () {
   const v2 = _.update(type, v1)
 
   await pkg.writeVersion(v2)
+  await pkg.addToGit()
   _.bye(v1, v2)
 }
 
