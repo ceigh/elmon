@@ -6,14 +6,14 @@ const _ = require('./src/_')
 
 async function run () {
   const { flags } = meow(opts)
-  const type = _.isEmpty(flags)
-    ? await _.prompt() : _.getType(flags)
+  const updateType = _.getUpdType(flags) ||
+    await _.getUpdTypePrompt()
+
   const v1 = await pkg.getVersion()
-  const v2 = _.update(type, v1)
+  const v2 = _.getUpdatedVersion(updateType, v1)
 
   await pkg.writeVersion(v2)
-  await pkg.addToGit()
-  _.bye(v1, v2)
+  _.showInfo(v1, v2)
 }
 
 if (require.main === module) run()

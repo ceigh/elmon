@@ -1,11 +1,12 @@
 const prompts = require('prompts')
 const { green, gray, underline } = require('kleur')
 
-exports.isEmpty = flags => !Object.keys(flags).some(f => flags[f])
+exports.getUpdType = flags => {
+  const usedFlags = Object.keys(flags).filter(f => flags[f])
+  if (usedFlags.length) return usedFlags[0]
+}
 
-exports.getType = flags => Object.keys(flags).filter(f => flags[f])[0]
-
-exports.prompt = async () => {
+exports.getUpdTypePrompt = async () => {
   const resp = await prompts({
     type: 'select',
     name: 'type',
@@ -20,7 +21,7 @@ exports.prompt = async () => {
   return resp.type
 }
 
-exports.update = (type, v1) => {
+exports.getUpdatedVersion = (type, v1) => {
   const nums = v1.split('.').map(v => +v)
   switch (type) {
     case 'major':
@@ -36,5 +37,5 @@ exports.update = (type, v1) => {
   return nums.join('.')
 }
 
-exports.bye = (v1, v2) => console.log(green('✔') +
+exports.showInfo = (v1, v2) => console.log(green('✔') +
   ` Version updated: ${underline(v1)} ${gray('›')} ${underline(v2)}`)
