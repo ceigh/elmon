@@ -1,11 +1,8 @@
-const { green, gray, underline } = require('kleur')
 const prompts = require('prompts')
-const pkg = require('package-json-io')
-
-exports.bye = (v1, v2) => console.log(green('✔') +
-  ` Version updated: ${underline(v1)} ${gray('›')} ${underline(v2)}`)
+const { green, gray, underline } = require('kleur')
 
 exports.isEmpty = flags => !Object.keys(flags).some(f => flags[f])
+
 exports.getType = flags => Object.keys(flags).filter(f => flags[f])[0]
 
 exports.prompt = async () => {
@@ -39,25 +36,5 @@ exports.update = (type, v1) => {
   return nums.join('.')
 }
 
-exports.write = v => {
-  return new Promise((resolve, reject) => {
-    pkg.read((err, data) => {
-      if (err) reject(err)
-      data.version = v
-
-      pkg.update(data, e => {
-        if (e) reject(e)
-        resolve()
-      })
-    })
-  })
-}
-
-exports.getVersion = () => {
-  return new Promise((resolve, reject) => {
-    pkg.read((e, data) => {
-      if (e) reject(e)
-      resolve(data.version)
-    })
-  })
-}
+exports.bye = (v1, v2) => console.log(green('✔') +
+  ` Version updated: ${underline(v1)} ${gray('›')} ${underline(v2)}`)
