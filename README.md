@@ -36,8 +36,11 @@ $ e -p           # 0.0.0 > 0.0.1
 $ e              # open prompt with update type select
 ```
 
-[![asciicast](https://asciinema.org/a/323238.svg)](https://asciinema.org/a/323238)
-
+<p align='center'>
+  <a href='https://asciinema.org/a/323238'>
+    <img src='https://asciinema.org/a/323238.svg' alt='asciicast'/>
+  </a>
+</p>
 
 ## Additional
 
